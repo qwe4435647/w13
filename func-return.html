@@ -6,23 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <label>輸入攝氏溫度：
-        <input type="number" id="c" placeholder="例如：25">
-    </label>
-    <button onclick="show()">轉換</button>
-    <p id="output"></p>
-
     <script>
         function t(n) {
-            let ans = 9 / 5 * n + 32;
-            return ans;
+            return (n * 9 / 5) + 32;
         }
 
-        function show() {
-            let c = document.getElementById('c').value;
-            let result = t(parseFloat(c));
-            document.getElementById('output').innerText = `${c}°C = ${result}°F`;
+        var n = parseFloat(prompt("請輸入攝氏溫度：", ""));
+
+        if (!isNaN(n)) {
+            var fahrenheit = t(n);
+            console.log(`${n}°C 等於 ${fahrenheit}°F`);
+            window.alert(`${n}°C 等於 ${fahrenheit}°F`);
+        } else {
+            console.log("請輸入有效的數字！");
+            window.alert("請輸入有效的數字！");
         }
     </script>
 </body>
+
 </html>
