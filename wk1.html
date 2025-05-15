@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function t(n) {
+            return (n * 9 / 5) + 32;
+        }
+
+        var n = parseFloat(prompt("請輸入攝氏溫度：", ""));
+
+        if (!isNaN(n)) {
+            var fahrenheit = t(n);
+            console.log(`${n}°C 等於 ${fahrenheit}°F`);
+            window.alert(`${n}°C 等於 ${fahrenheit}°F`);
+        } else {
+            console.log("請輸入有效的數字！");
+            window.alert("請輸入有效的數字！");
+        }
+    </script>
+</body>
+
+</html>
