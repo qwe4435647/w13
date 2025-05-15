@@ -7,21 +7,21 @@
 </head>
 <body>
     <script>
-        function t(n) {
-            return (n * 9 / 5) + 32;
+        var x=prompt("輸入成績0~100","");
+        if(x>=80){
+            console.log("A");
+            window.alert("A");
+        }else if(x>=70){
+            console.log("B");
+            window.alert("B");
+        }else if(x>=60){
+            console.log("C");
+            window.alert("C");
+        }else{
+            console.log("D");
+            window.alert("D");
         }
 
-        var n = parseFloat(prompt("請輸入攝氏溫度：", ""));
-
-        if (!isNaN(n)) {
-            var fahrenheit = t(n);
-            console.log(`${n}°C 等於 ${fahrenheit}°F`);
-            window.alert(`${n}°C 等於 ${fahrenheit}°F`);
-        } else {
-            console.log("請輸入有效的數字！");
-            window.alert("請輸入有效的數字！");
-        }
     </script>
 </body>
-
 </html>
